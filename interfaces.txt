@@ -1,0 +1,14 @@
+auto lo
+iface lo inet loopback
+
+iface ens3 inet manual
+
+auto vmbr0
+iface vmbr0 inet static
+	address 213.109.162.91
+	netmask 255.255.252.0
+	gateway 213.109.160.1
+	bridge_ports ens3
+	bridge_stp off
+	bridge_fd 0
+
